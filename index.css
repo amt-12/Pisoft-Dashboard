@@ -8,6 +8,36 @@ body {
   margin: 0px auto;
 }
 
+#greet {
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#username {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav-right-button {
+  height: 40px;
+  width: 40px;
+}
+
+#bell-icon {
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+}
+
+.top-tabs {
+  display: block;
+}
+
+.top-tabs-2 {
+  display: none;
+}
+
 .hero-1 {
   margin: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -54,11 +84,12 @@ body {
 
 .bar-chart {
   width: 100%;
+  overflow: hidden;
   /* min-width: 30rem; */
 }
 
 .out-bar-chart {
-  display:none  ;
+  display: none;
 }
 
 .pie-chart {
@@ -108,32 +139,53 @@ table tr:hover {
   background-color: #f2f2f2;
 }
 
+.active>p {
+  margin: 10px 0px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.batch-table-prnt {
+  width: 90%;
+  margin-top: 0px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 2fr));
+  gap: 20px;
+}
+
+
 .glassy-effect {
   background: linear-gradient(to bottom, #fdfdfd, #6c91b1, #337ab7);
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: 100% 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  padding: 10px;
-  opacity: 0.9;
+  opacity: 1;
+  width: 100%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  margin: 10px;
-  position: relative;
-  /* Changed from absolute to relative */
+  /* position: relative; */
+  /* margin: 0px 0px 20px 0px; */
+  overflow: hidden;
+  padding: 5px 10px;
 }
 
-.glassy-effect::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.glassy-effect>.table-container {
+  overflow-x: auto;
   width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  opacity: 0.5;
-  z-index: -1;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.glassy-effect table {
+  display: block;
+  border-collapse: collapse;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .pie-legend {
@@ -166,7 +218,7 @@ table tr:hover {
   position: relative;
   z-index: 20;
   bottom: 0;
-  left: 50%; 
+  left: 50%;
   width: 50%;
   height: 320px;
   margin-top: 40px;

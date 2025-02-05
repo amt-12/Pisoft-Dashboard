@@ -23,10 +23,10 @@
                 style="display: flex;justify-content: space-between; align-items: start; padding: 20px;flex-wrap: wrap;">
                 <div class="left-heading"
                     style="display: flex; flex-direction: column; justify-content: start; align-items:start; gap: 0px;">
-                    <p style="font-size: 15px; margin: 0px; padding: 0px;;">Good Afternoon,</p>
-                    <p style="font-weight: 600;font-size: 20px;">Amrit Pal Singh</p>
+                    <p id="greet">Good Afternoon,</p>
+                    <p id="username" >Amrit Pal Singh</p>
                 </div>
-                <div>
+                <div class="top-tabs">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#home" data-toggle="tab">Dashboard</a></li>
                         <li><a href="#profile" data-toggle="tab">Profile</a></li>
@@ -35,21 +35,28 @@
                     </ul>
                 </div>
                 <div style="display: flex; justify-content: center;align-items: center;gap: 20px;">
-                    <div
-                        style="height: 40px;width: 40px;border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);display: flex;justify-content: center;align-items: center;">
-                        <p class="glyphicon glyphicon-bell" style="font-size: 18px;"></p>
+                    <div class="nav-right-button"
+                        style="border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);display: flex;justify-content: center;align-items: center;">
+                        <p id="bell-icon" class="glyphicon glyphicon-bell"></p>
                     </div>
-                    <div
-                        style="height: 40px;width: 40px;border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);display: flex;justify-content: center;align-items: center;">
+                    <!-- <div style="height: 40px;width: 40px;border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);display: flex;justify-content: center;align-items: center;">
                         <p class="glyphicon glyphicon-bell" style="font-size: 18px;"></p>
-                    </div>
-                    <div
-                        style="height: 40px;width: 40px;border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);background-image: url('avatar-url');background-size: cover;background-position: center;position: relative;">
+                    </div> -->
+                    <div class="nav-right-button"
+                        style="border-radius: 40px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);background-image: url('avatar-url');background-size: cover;background-position: center;position: relative;">
                         <div
-                            style="position: absolute;bottom: 0;right: 0;background-color: green;border-radius: 50%;width: 8px;height: 8px;">
+                            style="position: absolute;bottom: 40%;right: 40%;background-color: green;border-radius: 50%;width: 8px;height: 8px;">
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="top-tabs-2">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home" data-toggle="tab">Dashboard</a></li>
+                    <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                </ul>
             </div>
 
             <!-- Tab panes -->
@@ -339,747 +346,671 @@
 
                     <!-- Tab panes for table -->
                     <div class="tab-content" id="table-tab-content">
-                        <div class="tab-pane active" id="table-home">
-                            <div>
-                                <p style="    margin: 0 0 10px; font-size: 15px; font-weight: 600; text-align: center;">
-                                    Batch 1</p>
-                                <div style="    width: 100%; /* padding-right: 10px; */ margin-top:20px ; display: grid;
-                                    align-content: center;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    grid-template-columns: repeat(2, minmax(0, 1fr));">
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
+                        <div class="tab-pane active" style="display: flex; flex-direction: column; align-items: center;"
+                            id="table-home">
+                            <!-- <div> -->
+                            <p> Batch 1</p>
+                            <div class="batch-table-prnt">
+                                <div class="glassy-effect">
+                                    <p style="margin: 0 0 10px; font-size: 15px; font-weight: 600; text-align: center;">
+                                        Batch 1
+                                    </p>
+                                    <div class="table-container">
+                                        <table>
+                                            <tr>
+                                                <th>Employee ID</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Email</th>
+                                                <th>Employee Phone</th>
+                                                <th>Employee Address</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amrit Pal Singh</td>
+                                                <td><a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                                </td>
+                                                <td><a href="tel:9876543210">9876543210</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Anaya Kumar</td>
+                                                <td><a href="mailto:anayakumar@gmail.com">anayakumar@gmail.com</a></td>
+                                                <td><a href="tel:9876543211">9876543211</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="margin: 0 0 10px; font-size: 15px; font-weight: 600; text-align: center;">
+                                        Batch 1
+                                    </p>
+                                    <div class="table-container">
+                                        <table>
+                                            <tr>
+                                                <th>Employee ID</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Email</th>
+                                                <th>Employee Phone</th>
+                                                <th>Employee Address</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amrit Pal Singh</td>
+                                                <td><a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                                </td>
+                                                <td><a href="tel:9876543210">9876543210</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Anaya Kumar</td>
+                                                <td><a href="mailto:anayakumar@gmail.com">anayakumar@gmail.com</a></td>
+                                                <td><a href="tel:9876543211">9876543211</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="margin: 0 0 10px; font-size: 15px; font-weight: 600; text-align: center;">
+                                        Batch 1
+                                    </p>
+                                    <div class="table-container">
+                                        <table>
+                                            <tr>
+                                                <th>Employee ID</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Email</th>
+                                                <th>Employee Phone</th>
+                                                <th>Employee Address</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amrit Pal Singh</td>
+                                                <td><a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                                </td>
+                                                <td><a href="tel:9876543210">9876543210</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Anaya Kumar</td>
+                                                <td><a href="mailto:anayakumar@gmail.com">anayakumar@gmail.com</a></td>
+                                                <td><a href="tel:9876543211">9876543211</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="margin: 0 0 10px; font-size: 15px; font-weight: 600; text-align: center;">
+                                        Batch 1
+                                    </p>
+                                    <div class="table-container">
+                                        <table>
+                                            <tr>
+                                                <th>Employee ID</th>
+                                                <th>Employee Name</th>
+                                                <th>Employee Email</th>
+                                                <th>Employee Phone</th>
+                                                <th>Employee Address</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amrit Pal Singh</td>
+                                                <td><a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                                </td>
+                                                <td><a href="tel:9876543210">9876543210</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Anaya Kumar</td>
+                                                <td><a href="mailto:anayakumar@gmail.com">anayakumar@gmail.com</a></td>
+                                                <td><a href="tel:9876543211">9876543211</a></td>
+                                                <td>Chandigarh</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="tab-pane" id="table-home">
+                            <!-- <div> -->
+                            <p> Batch 1</p>
+                            <div class="batch-table-prnt">
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-align: center;">Batch 1
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                                        anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
                                             font-size: 15px;
                                             font-weight: 600;
                                             text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
                                    anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
                    font-size: 15px;
                    font-weight: 600;
                    text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
                                amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
                                    anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
                    font-size: 15px;
                    font-weight: 600;
                    text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
                                amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
                                    anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="tab-pane" id="table-home">
+                            <!-- <div> -->
+                            <p> Batch 1</p>
+                            <div class="batch-table-prnt">
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-align: center;">Batch 1
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                                        anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-align: center;">Batch 1</p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                   anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
                    font-size: 15px;
                    font-weight: 600;
                    text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
                                amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
                                    anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-
+                                        </tr>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="table-profile">
-                            <div>
-                                <p style="    margin: 0 0 10px;
-            font-size: 15px;
-            font-weight: 600;
-            text-align: center;">Batch 2</p>
-                                <div style="    width: 100%;
-            padding-right: 10px;
-            margin-top:20px ;
-            display: grid
-        ;
-            align-content: center;
-            justify-content: space-between;
-            align-items: center;
-            grid-template-columns: repeat(2, minmax(0, 1fr));">
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                font-size: 15px;
-                font-weight: 600;
-                text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                            amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                   font-size: 15px;
+                   font-weight: 600;
+                   text-align: center;">Batch 1</p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                   anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                font-size: 15px;
-                font-weight: 600;
-                text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                            amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                font-size: 15px;
-                font-weight: 600;
-                text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                            amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                font-size: 15px;
-                font-weight: 600;
-                text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                            amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-
+                                        </tr>
+                                        </tr>
+                                    </table>
                                 </div>
+
                             </div>
+                            <!-- </div> -->
                         </div>
-                        <div class="tab-pane" id="table-messages">
-                            <div>
-                                <p style="    margin: 0 0 10px;
-            font-size: 15px;
-            font-weight: 600;
-            text-align: center;">Batch 3</p>
-                                <div style="    width: 100%;
-              padding-right: 10px;
-              margin-top:20px ;
-              display: grid
-          ;
-              align-content: center;
-              justify-content: space-between;
-              align-items: center;
-              grid-template-columns: repeat(2, minmax(0, 1fr));">
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                        <div class="tab-pane " id="table-home">
+                            <!-- <div> -->
+                            <p> Batch 1</p>
+                            <div class="batch-table-prnt">
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-align: center;">Batch 1
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                                        anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-
+                                        </tr>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="table-settings">
-                            <div>
-                                <p style="    margin: 0 0 10px;
-            font-size: 15px;
-            font-weight: 600;
-            text-align: center;">Batch 4</p>
-                                <div style="    width: 100%;
-              padding-right: 10px;
-              margin-top:20px ;
-              display: grid
-          ;
-              align-content: center;
-              justify-content: space-between;
-              align-items: center;
-              grid-template-columns: repeat(2, minmax(0, 1fr));">
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-align: center;">Batch 1</p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                   anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
 
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="glassy-effect">
-                                        <p style="    margin: 0 0 10px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  text-align: center;">Batch 1</p>
-                                        <table>
-                                            <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Employee Email</th>
-                                                <th>Employee Phone</th>
-                                                <th>Employee Address</th>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Amrit Pal Singh</td>
-                                                <td>
-                                                    <a href="mailto:
-                              amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543210">9876543210</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Anaya Kumar</td>
-                                                <td>
-                                                    <a href="mailto:
-                                  anayakumar@gmail.com">anayakumar@gmail.com</a>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:9876543211">9876543211</a>
-                                                </td>
-                                                <td>Chandigarh</td>
-                                            </tr>
-
-                                            </tr>
-                                            </tr>
-                                        </table>
-                                    </div>
-
+                                        </tr>
+                                        </tr>
+                                    </table>
                                 </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                   font-size: 15px;
+                   font-weight: 600;
+                   text-align: center;">Batch 1</p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                   anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="glassy-effect">
+                                    <p style="    margin: 0 0 10px;
+                   font-size: 15px;
+                   font-weight: 600;
+                   text-align: center;">Batch 1</p>
+                                    <table>
+                                        <tr>
+                                            <th>Employee ID</th>
+                                            <th>Employee Name</th>
+                                            <th>Employee Email</th>
+                                            <th>Employee Phone</th>
+                                            <th>Employee Address</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amrit Pal Singh</td>
+                                            <td>
+                                                <a href="mailto:
+                               amritpalsingh@gmail.com">amritpalsingh@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543210">9876543210</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Anaya Kumar</td>
+                                            <td>
+                                                <a href="mailto:
+                                   anayakumar@gmail.com">anayakumar@gmail.com</a>
+                                            </td>
+                                            <td>
+                                                <a href="tel:9876543211">9876543211</a>
+                                            </td>
+                                            <td>Chandigarh</td>
+                                        </tr>
+
+                                        </tr>
+                                        </tr>
+                                    </table>
+                                </div>
+
                             </div>
+                            <!-- </div> -->
                         </div>
+
+
+
                     </div>
 
 
