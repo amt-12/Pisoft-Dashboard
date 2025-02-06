@@ -203,7 +203,7 @@
         border: 1px dotted black;
         padding: 10px;
         /* Adjusted padding */
-        border-radius: 20px;
+        border-radius: 10px;
         margin-top: 7px;
         justify-content: flex-start;
         align-items: center;
@@ -226,7 +226,7 @@
 
     #res-empl-box-parent #divider {
         height: 0.5px;
-        width: 95%;
+        width: 100%;
         margin: 8px 0px;
         background-color: rgba(0, 0, 0, 0.163);
     }
