@@ -170,6 +170,70 @@
 }
 
 
+@media (max-width: 680px) {
+    #table-tab-content {
+        display: none;
+    }
+
+    #batch-tab {
+        display: none;
+    }
+
+    #res-batch-table {
+        display: block;
+        padding: 20px 0px;
+    }
+
+    #res-batch-tab {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .empl-box-parent {
+        display: none;
+    }
+
+    #res-empl-box-parent {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-bottom: 0px;
+        border: 1px dotted black;
+        padding: 10px;
+        /* Adjusted padding */
+        border-radius: 20px;
+        margin-top: 7px;
+        justify-content: flex-start;
+        align-items: center;
+        height: 36vh;
+        width: 100%;
+        overflow-y: auto;
+        /* Ensure only vertical scroll */
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    #res-empl-box-parent .empl-info-box {
+        margin: 0px;
+        border: 0px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0px;
+        /* border-bottom: 2px solid rgba(0, 0, 0, 0.115); */
+    }
+
+    #res-empl-box-parent #divider {
+        height: 0.5px;
+        width: 95%;
+        margin: 8px 0px;
+        background-color: rgba(0, 0, 0, 0.163);
+    }
+
+}
+
+
 @media (max-width: 599px) {
     .pie-chart {
         display: flex;
@@ -254,10 +318,7 @@
 }
 
 
-@media (max-width: 385px) {
-    
-
-}
+@media (max-width: 385px) {}
 
 
 @media (max-width: 296px) {
